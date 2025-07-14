@@ -1,3 +1,4 @@
+pydantic
 jupyterlab
 plotly
 scikit-learn
@@ -10,3 +11,4 @@ openpyxl
 optuna
 hyperopt
 tensorflow
+
