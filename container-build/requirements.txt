@@ -1,0 +1,12 @@
+jupyterlab
+plotly
+scikit-learn
+lightgbm
+pyproj
+geopandas
+matplotlib
+seaborn
+openpyxl
+optuna
+hyperopt
+tensorflow

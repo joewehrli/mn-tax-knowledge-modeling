@@ -1,2 +1,8 @@
 # mn-tax-knowledge-modeling
-research into knowledge management for MN tax law
+
+Repo with research into knowledge management for MN tax law
+
+# build the devcontainer image
+
+See container-build README.md
+
