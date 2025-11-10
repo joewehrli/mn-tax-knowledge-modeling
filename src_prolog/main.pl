@@ -10,3 +10,7 @@
 classify_parcel(ParcID) :-
     classify_residential(ParcID, Class),
     format('Parcel ~w classified as: ~w~n', [ParcID, Class]).
+
+dotst :-
+    load_test_files([]), 
+    run_tests([residential]).

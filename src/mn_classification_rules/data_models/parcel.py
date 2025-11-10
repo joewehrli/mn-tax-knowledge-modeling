@@ -13,4 +13,10 @@ class Parcel(BaseModel):
     use_description: Optional[str] = None
     zoning: Optional[str] = None
     contiguous_to_other_homestead: Optional[bool] = False
+    # added 4
+    num_units: int | None = None
+    affordable_housing_program: str | None = None  # e.g. "section42"
+    percent_low_income_units: float | None = None  # percentage 0–100
+
+
 
