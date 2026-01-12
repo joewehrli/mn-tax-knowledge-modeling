@@ -22,7 +22,7 @@ buildah run $cname -- bash -i -c "source /root/ocipy/bin/activate; pip freeze" >
 buildah run $cname -- bash -i -c "apt-get install -y  swi-prolog"
 }
 
-"""
+: <<'COMMENT'
 (type -p wget >/dev/null || (apt update && apt install wget -y)) \
 	&& mkdir -p -m 755 /etc/apt/keyrings \
 	&& out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg \
@@ -32,20 +32,22 @@ buildah run $cname -- bash -i -c "apt-get install -y  swi-prolog"
 	&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
 	&& apt update \
 	&& apt install gh -y
-"""
+COMMENT
 
-"""
+: <<'COMMENT'
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+or ARM
+curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
-"""
+COMMENT
 
-"""
+: <<'COMMENT'
 curl -fsSL https://claude.ai/install.sh | bash
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
-"""
+COMMENT
 
-"""
+: <<'COMMENT'
 curl -fsSL https://claude.ai/install.sh | bash
 Setting up Claude Code...
 
@@ -63,15 +65,15 @@ Setting up Claude Code...
   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
 
 Installation complete!
-"""
+COMMENT
 
-"""
+: <<'COMMENT'
 # get tyl claude release
 # see https://github.com/tyler-technologies/claude-code-with-amazon-bedrock-distribution
 ./install.sh
-"""
+COMMENT
 
-"""
+: <<'COMMENT'
 root@3188c866d331:/workspaces/mn-tax-knowledge-modeling/claude-code-bedrock-20251030_1# ./install.sh 
 ======================================
 Claude Code Authentication Installer
@@ -104,5 +106,5 @@ Configuring AWS profile...
 ✓ Installation complete!
 ======================================
 Note: Authentication will automatically open your browser when you run Claude Code.
-"""
+COMMENT
 

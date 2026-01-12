@@ -1,9 +1,9 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/markdown
 {
-	"name": "mn-tax-knowledge-modeling-devcon-v0002",
+	"name": "mn-tax-knowledge-modeling-devcon-v03",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "localhost/mn-tax-knowledge-modeling-devcon:0002"
+	"image": "localhost/mn-tax-knowledge-modeling-v03-devcon:v03"
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 

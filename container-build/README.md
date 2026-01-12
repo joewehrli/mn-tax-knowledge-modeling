@@ -9,7 +9,7 @@ source build-buildah.sh
 make_instance
 make_runtime
 # commit
-buildah commit $cname $cname-devcon:0001
+buildah commit $cname $cname-devcon:v03
 ```
 
 # Prolog
